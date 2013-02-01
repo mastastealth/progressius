@@ -170,7 +170,7 @@ $(function(){
 	});	
 	
 	// -- Edit info --
-	$('.editable').focus( function() {
+	$('body').on('focus','.editable', function() {
 		$(this).addClass('edit');
 	});
 
@@ -182,7 +182,7 @@ $(function(){
 	});
 
 	// Adjust thermo with newly edited value
-	$('.editable').blur( function() {
+	$('body').on('blur','.editable', function() {
 		var val = $(this).html().replace(/\D/g,'');
 		store.setItem($(this).parent().parent().attr("id")+"_saved", val);
 		$(this).updateThermo();
