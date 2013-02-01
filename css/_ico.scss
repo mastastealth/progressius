@@ -1,0 +1,138 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot');
+	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.svg#icomoon') format('svg'),
+		url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'icomoon';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"]:before {
+*/
+.icon-home:before, .icon-office:before, .icon-pencil:before, .icon-droplet:before, 
+.icon-image:before, .icon-camera:before, .icon-music:before, .icon-film:before, 
+.icon-books:before, .icon-folder-open:before, .icon-cart:before, .icon-credit:before, 
+.icon-location:before, .icon-bubble:before, .icon-gift:before, .icon-bug:before, 
+.icon-cog:before, .icon-hammer:before, .icon-rocket:before, .icon-food:before, 
+.icon-airplane:before, .icon-fire:before, .icon-target:before, .icon-code:before, 
+.icon-support:before, .icon-screen:before, .icon-laptop:before, .icon-mobile:before, 
+.icon-earth:before, .icon-smiley:before, .icon-key:before, .icon-truck:before {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-home:before {
+	content: "\21";
+}
+.icon-office:before {
+	content: "\62";
+}
+.icon-pencil:before {
+	content: "\23";
+}
+.icon-droplet:before {
+	content: "\24";
+}
+.icon-image:before {
+	content: "\25";
+}
+.icon-camera:before {
+	content: "\26";
+}
+.icon-music:before {
+	content: "\6d";
+}
+.icon-film:before {
+	content: "\28";
+}
+.icon-books:before {
+	content: "\29";
+}
+.icon-folder-open:before {
+	content: "\2a";
+}
+.icon-cart:before {
+	content: "\2b";
+}
+.icon-credit:before {
+	content: "\2c";
+}
+.icon-location:before {
+	content: "\2d";
+}
+.icon-bubble:before {
+	content: "\2e";
+}
+.icon-gift:before {
+	content: "\2f";
+}
+.icon-bug:before {
+	content: "\30";
+}
+.icon-cog:before {
+	content: "\31";
+}
+.icon-hammer:before {
+	content: "\32";
+}
+.icon-rocket:before {
+	content: "\33";
+}
+.icon-food:before {
+	content: "\34";
+}
+.icon-airplane:before {
+	content: "\35";
+}
+.icon-fire:before {
+	content: "\36";
+}
+.icon-target:before {
+	content: "\37";
+}
+.icon-code:before {
+	content: "\38";
+}
+.icon-support:before {
+	content: "\39";
+}
+.icon-screen:before {
+	content: "\3a";
+}
+.icon-laptop:before {
+	content: "\3b";
+}
+.icon-mobile:before {
+	content: "\3c";
+}
+.icon-earth:before {
+	content: "\3d";
+}
+.icon-smiley:before {
+	content: "\3e";
+}
+.icon-key:before {
+	content: "\3f";
+}
+.icon-truck:before {
+	content: "\40";
+}

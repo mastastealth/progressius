@@ -1,0 +1,416 @@
+@charset "UTF-8";
+
+@import "reset";
+@import "all";
+@import "ico";
+
+/* ----------------------------
+Author: Brian Franco
+
+/* General Classes
+ ============================================================ */
+* { @include box-sizing(border-box); }
+
+p { margin-bottom:10px; }
+
+a { text-decoration: none; }
+
+span.clear { clear: both; }
+
+.cf:after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+
+input[type=text] {
+	border: 0 none;
+	@include border-radius(3px);
+	@include box-shadow(1px 1px 0 rgba(0,0,0,0.5));
+	background: #FFF; color: #999 !important;
+	height: 48px; padding: 0 5px;
+	text-shadow: none;
+}
+
+/* Body
+============================================================ */
+html { font-size: 62.5%; }
+
+body {
+ 	background:#222 url('../images/bg/bg_stripe.png'); color:#000;
+	font-family: 'Amaranth', sans-serif; @include font-size(16);
+}
+
+/* Wrapper
+ ============================================================ */
+ .wrapper {
+ 	margin: 0 auto;
+ 	width:960px;
+ }
+
+/* Header
+============================================================ */
+
+header.global {
+	background: rgba(0,0,0,0.45);
+	@include border-radius(0 0 5px 5px);
+	@include box-shadow(1px 1px 0 rgba(255,255,255,0.25));
+	line-height: 40px; width: 90%;
+	margin: 0 auto 85px; padding: 0 20px;
+	position: relative; z-index: 1;
+
+	nav { cursor: default; float: right; }
+
+	a { 
+		color: #FFF; @include font-size(22);
+		@include transition(all 0.3s ease);
+		position: relative; 
+
+		&.about:hover { color: #CCC; }
+		&.clear:hover { color: #CC333F; }
+		&.add:hover { color: #EDC951; }
+	}
+
+	.title {
+		background: #CC333F;
+		@include border-radius(0 0 5px 5px);
+		@include box-shadow(1px 1px 0 rgba(255,255,255,0.25));
+		color: #FFF; @include font-size(22);
+		line-height: 62px; padding: 0 16px;
+		position: absolute; left: 0; top: 0;
+	}
+
+	.about-box {
+		background: rgba(0,0,0,0.35); color: #FFF;
+		@include border-radius(0 0 5px 5px);
+		font-family: Helvetica, Arial, sans-serif; 
+		@include font-size(14); line-height: 150%;
+		max-height: 0; overflow: hidden; padding: 0px 10px;
+		position: absolute; right: 20px; top: 40px;
+		@include transition(all 0.5s ease); width: 320px;
+
+		&.on { max-height: 220px; padding: 10px; }
+		a { color: #CCC; @include font-size(14); }
+	}
+}
+
+.new {
+	background: #EDC951;
+	@include border-radius(0 0 5px 5px);
+	@include box-shadow(1px 1px 0 rgba(0,0,0,0.5));
+	margin-right: 0; padding: 0 10px;
+	max-height: 0; overflow: hidden;
+	position: absolute;
+	top: 42px; right: 5px;
+	width: 296px;
+	@include transition(all 0.5s ease);
+
+	&.on { max-height: 200px; padding: 10px; }
+
+	input[type=text] {
+		@include border-radius(10px); color: #999; 
+		font-family: 'Amaranth', sans-serif; @include font-size(16);
+		margin-bottom: 10px; padding: 15px;
+		position: relative;
+		width: 100%;
+	}
+	
+	.ico, a {
+		background: #CC333F;
+		@include border-radius(10px);
+		color: #FFF;
+		float: left; padding: 5px 10px;
+	}
+
+	.ico {
+		background: #FFF; color: #333;
+		@include border-radius(25px);
+		@include box-shadow(1px 1px 0 rgba(0,0,0,0.5));
+		@include font-size(30);
+		margin-right: 10px; padding: 0;
+		cursor: pointer; height: 50px;
+		line-height: 54px; width: 50px;
+		text-align: center;
+	}
+
+	.ico-menu {
+		background: #FFF; cursor: default;
+		@include border-radius(0 0 5px 5px);
+		@include box-shadow(1px 1px 0 rgba(0,0,0,0.5));
+		margin-right: 0; padding: 0 10px;
+		max-height: 0; overflow: hidden;
+		position: absolute;
+		top: 0; left: 0;
+		width: 100%;
+		@include transition(all 0.5s ease);
+		z-index: 1;
+
+		&.on { max-height: 200px; padding: 10px; }
+
+		i { 
+			color: #333; display: inline-block; 
+			cursor: pointer; @include font-size(21);
+
+			&:hover { color: #CC333F; }
+		}
+	}
+}
+
+/* Content
+============================================================ */
+.main {
+	margin: 0 auto 96px;
+	position: relative;
+	text-align: center; width: 90%;
+	@include transition(width 0.5s ease); 
+}
+
+.starter {
+	margin-bottom: 50px;
+	padding-top: 120px;
+
+	h1 { 
+		color: #EDC951;
+		@include font-size(48); 
+		font-weight: 700;
+		position: relative; 
+		text-shadow: 1px 1px 0 rgba(0,0,0,0.4);
+
+		span {
+			background: #EDC951; cursor: pointer;
+			@include border-radius(40px);
+			border: 8px solid #FFF; display: block;
+			color: #FFF; @include font-size(64); 
+			line-height: 54px; height: 80px; width: 80px;
+			position: absolute; left: 50%; top: -80px;
+			margin-left: -40px; text-align: center;
+			text-shadow: none; 
+			@include transition(background 0.3s);
+
+			&:hover { background: #CC333F; }
+		}
+	}
+}
+
+section.goal {
+	background: #fff;
+	border-radius: 28px;
+	cursor: default;
+	display: inline-block;
+	height: 400px;
+	margin: 0 110px 20px;
+	position: relative;
+	width: 56px;
+
+	&:nth-child(2) { margin-left: 0; }
+
+	&:before {
+		@include linear-gradient(#CCC,#F3F3F3);
+		border-radius: 24px;
+		content: '';
+		display: block;
+		height: 380px;
+		position: absolute;
+		top: 10px; left: 10px;
+		width: 36px;	
+	}
+
+	&:after {
+		background: rgba(51,51,51,0.75);
+		@include border-radius( 50px /#{13px} );
+		content: ''; 
+		position: absolute; left: -22px; bottom: -50px;
+		height: 25px; width: 100px;
+	}
+}
+		
+	section.goal header {
+		border: 6px solid #FFF;
+		border-radius: 40px;
+		position: absolute;
+		top: -12px; left: -12px;
+		height: 80px;
+		margin-bottom: 0;
+		width: 80px;
+		z-index: 7;
+		@include transition(all 0.5s ease);
+		
+		i {
+			@include border-radius(32px);
+			color: #FFF;
+			display: block; height: 64px;
+			@include font-size(42);
+			line-height: 68px;
+			margin: 2px auto 0; width: 64px;
+		}
+	}
+		
+		section.done header {
+			box-shadow: inset 0 0 8px #ddd, 0 0 10px #FFF;
+		}
+	
+	section h1 {
+		color: #fff;
+		font-size: 24px;
+		font-style: italic;
+		font-weight: 700;
+		position: absolute;
+		left: -190px; top: 220px;
+		text-align: right;
+		width: 350px;
+		z-index: 8;
+		transform: rotate(270deg); 
+	}
+	
+	section > h2 {
+		color: #fff; font-size: 64px;
+		font-style: italic; font-weight: 700;
+		position: absolute;
+		top: 0; left: 72px; 
+		text-shadow: 1px 1px 0 rgba(0,0,0,0.4);
+		@include transition(color 0.5s ease);
+	}
+		//section > h2:before { content: '$';}
+		section.done > h2 { color: rgba(0,0,0,0.5); }
+		
+	section > ul {
+		position: absolute;
+		top: -15px; left: -25px;
+		text-align: center;
+		width: 20px;
+		z-index: 15;
+	}
+		section > ul li a {
+			color: #fff; opacity: 0.6;
+			transition: all 0.2s;
+		}
+			section > ul li a:hover { font-size: 20px; opacity: 1; }
+	
+	section.goal div.sofar {
+		background: #abc123;
+		display: block;
+		margin: 0 auto;
+		height: 3%;
+		max-height: 348px;
+		position: absolute;
+		bottom: 27px; left: 10px;
+		width: 36px;
+		/*z-index: 5;*/
+		@include transition(height 0.5s ease); 
+
+		.top {
+			background: #8aa000;
+			border-radius: 36px/9px;
+			height: 9px;
+			position: absolute;
+			top: -6px; left: 0;
+			width: 36px; z-index: 6;
+		}
+		
+		&:after {
+			background: inherit;
+			border-radius: 18px;
+			content: '';
+			height: 36px;
+			position: absolute;
+			bottom: -18px; left: 0;
+			width: 36px; z-index: 4;
+		}
+	
+		h2 {
+			color: #abc123; font-size: 48px;
+			cursor: pointer;
+			font-style: italic; font-weight: 700;
+			position: absolute;
+			top: -28px; left: 72px;
+			text-shadow: 2px 2px 0 rgba(0,0,0,0.5);
+			@include transition(all 0.5s ease);
+
+			&:not(.edit):hover:after { 
+				content: '✍'; font-style: normal; 
+				@include font-size(30);
+			}
+			//&:before { content: '$'; }
+
+			&.edit {
+				@include border-radius(5px);
+				@include box-shadow(1px 1px 0 rgba(0,0,0,0.5));
+				background: #FFF; color: #999 !important;
+				line-height: 48px; padding: 5px;
+				text-shadow: none;
+			}
+		}
+	}
+		section.done div.sofar h2 {
+			font-size: 64px;
+			top: -68px; left: 60px;
+			text-shadow: none;
+		}
+
+
+		section.goal input { 
+			color: #999; 
+			margin-bottom: 10px; 
+			padding: 0 10px;
+			position: relative;
+			width: 230px;
+			z-index: 20;
+		}
+		
+		section.goal button {
+			border-radius: 10px;
+			color: #999;
+			cursor: pointer;
+			display: block;
+			float: left;
+			font-size: 24px;
+			font-style: normal;
+			padding: 2px 4px 4px;
+			position: relative;
+			top: -57px; left: 160px;
+			transition: background 0.5s ease;
+			z-index: 21;
+		}
+		
+		section.goal button:hover {
+			color: #abc123;
+		}
+		
+		section.goal div.sofar span.fancy {
+			background: rgba(255,255,255,0.5);
+			border-radius: 0 0 3px 3px;
+			display: block;
+			height: 100%;
+			margin-left: 22px;
+			position: relative;
+			top: 3px;
+			width: 6px;
+			z-index: 5;
+		}
+
+ 
+/* Footer
+============================================================ */
+footer {
+	@include transition(all 0.2s ease);
+	margin: 0 auto; width: 90%; 
+
+	a { 
+		display: inline-block; 
+		float: left; opacity: 0.6;
+		@include transition(opacity 0.4s);
+
+		&.b { 
+			background: url(../images/icn/icn_logo.png) no-repeat;
+			height: 29px; width: 36px; float: right; 
+		}
+		&:hover { opacity: 1; }
+	}
+
+	.social { float: right; padding-top: 7px; }
+	
+	img {
+		height: auto;
+		width: 128px;
+	}
+}
